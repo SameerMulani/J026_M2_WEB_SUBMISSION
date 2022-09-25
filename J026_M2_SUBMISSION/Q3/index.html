@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview of Modern JS fundamental</title>
+    <link rel="'stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    
+    <h2>Counter</h2>
+    <h3 id="count"></h3>
+
+    <button onclick="increment()">Increment</button>
+    <h3 id="add"></h3>
+
+    <button onclick="decrement()">Decrement</button>
+
+    <script>
+        function increment(){
+            count = document.getElementById("count").innerHTML
+            count++
+            document.getElementById("count").innerHTML = count
+            alert('Incremented') 
+        }
+        function decrement(){
+            count = document.getElementById("count").innerHTML
+            if (count>0){       //if the count is equal to 0 then it wont decrement further
+                count--
+                document.getElementById("count").innerHTML = count
+                alert('Decremented')  
+
+            }else{
+                alert('Cannot be decremented futher!!')
+            }
+            document.getElementById("count").innerHTML = count++
+        }
+
+    </script>
+
+</body>
+</html>

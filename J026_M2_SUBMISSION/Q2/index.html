@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview of Modern JS fundamental</title>
+    <link rel="'stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <h2>Variable Declaration:</h2>
+    <h3 id="var"></h3>
+
+    <h2>Addition Function Implement:</h2>
+    <button onclick="addition(2,3)">Add</button>
+    <h3 id="add"></h3>
+
+    <h2>Addition Function(Arrow function):</h2>
+    <h3 id="arrow"></h3>
+
+    <h2>For Loop:</h2>
+    <h3 id="for"></h3>
+
+    <h2>If else:</h2>
+    <h3 id="if"></h3>
+
+    <script>
+
+// Variable declared:
+let myvar = 'Sameer'
+document.getElementById("var").innerHTML = myvar
+
+//Addition function
+function addition(a,b){
+    return document.getElementById("add").innerHTML = a+b
+}
+//Addition function with arrow fucntion:
+let x = (a,b) => {   //one more way to declare arrow function
+    return a+b;
+};
+document.getElementById("arrow").innerHTML = x
+
+//FOR LOOP:
+let count = 0
+for (i=0;i<10;i++){   //will iterate 10 times 
+    count++
+}
+document.getElementById("for").innerHTML = count
+
+
+//IF ELSE:
+// in (==) only value is checked and not its type (eg below)
+// whereas in (===) both type as well as the values are checked
+let hour = '10'
+if (hour<8){
+    let c ='hours less'
+} else if (hour ==10){
+    let c = 'hour is equal'
+}
+else{
+    let c ='hour more'
+}
+document.getElementById("if").innerHTML = c
+    
+    </script>
+    
+</body>
+</html>
+
